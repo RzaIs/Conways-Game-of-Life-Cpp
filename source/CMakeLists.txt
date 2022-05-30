@@ -11,4 +11,5 @@ set (CMAKE_CXX_STANDARD 14)
 add_executable(${PROJECT_NAME} main.cpp)
 
 # adding subdirectories
+add_subdirectory(cell)
 add_subdirectory(point)
