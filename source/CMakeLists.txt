@@ -9,3 +9,6 @@ set (CMAKE_CXX_STANDARD 14)
 
 # setting executable name
 add_executable(${PROJECT_NAME} main.cpp)
+
+# adding subdirectories
+add_subdirectory(point)
