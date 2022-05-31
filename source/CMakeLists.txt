@@ -13,3 +13,4 @@ add_executable(${PROJECT_NAME} main.cpp)
 # adding subdirectories
 add_subdirectory(cell)
 add_subdirectory(point)
+add_subdirectory(board)
