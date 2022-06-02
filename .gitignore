@@ -46,6 +46,7 @@ _deps
 
 #custom
 build
+docs
 .vscode
 .DS_Store
 *.code-workspace
