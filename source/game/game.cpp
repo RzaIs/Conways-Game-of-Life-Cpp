@@ -1,11 +1,11 @@
 #include "game.hpp"
 
-Game::Game(int cols_width, int rows_height, int scale) {
+Game::Game(int cols, int rows, int scale) {
   srand(getpid());
-  this->cols_width = cols_width;
-  this->rows_height = rows_height;
-  this->screen = new Screen(cols_width, rows_height, scale);
-  this->board = new Board(cols_width, rows_height);
+  this->cols = cols;
+  this->rows = rows;
+  this->screen = new Screen(cols, rows, scale);
+  this->board = new Board(cols, rows);
 }
 
 Game::~Game() {
@@ -14,22 +14,24 @@ Game::~Game() {
 }
 
 void Game::cycle() {
-  screen->setDrawColor(30, 30, 30, 255);
-  for (int i = 0; i < this->cols_width; i++) {
-    for (int j = 0; j < this->rows_height; j++) {
+  screen->setDrawColor(0, 0, 0, 0);
+  for (int i = 0; i < this->cols; i++) {
+    for (int j = 0; j < this->rows; j++) {
       if (!this->board->getCellState(i, j))
         this->screen->render(i, j);
     }
   }
 
-  screen->setDrawColor(158, 88, 243, 255);
-  for (int i = 0; i < this->cols_width; i++) {
-    for (int j = 0; j < this->rows_height; j++) {
+  screen->setDrawColor(158, 88, 243, 0);
+  for (int i = 0; i < this->cols; i++) {
+    for (int j = 0; j < this->rows; j++) {
       if (this->board->getCellState(i, j))
         this->screen->render(i, j);
     }
   }
-  // usleep(200000);
+
+  SDL_Delay(60);
+  
   this->board->generateNext();
 }
 
