@@ -110,6 +110,18 @@ std::vector<Cell> Board::getNeighbors(int col, int row) {
   };
 
   for (Point & point : positions) {
+    if (point.x < 0)
+      point.x = this->cols - 1;
+    else if (point.x == this->cols)
+      point.x = 0;
+
+    if (point.y < 0)
+      point.y = this->rows - 1;
+    else if (point.y == this->rows)
+      point.y = 0;
+  }
+
+  for (Point & point : positions) {
     if (this->cellBelong(point.x, point.y)) {
       neighbors.push_back(
         this->oldTable
