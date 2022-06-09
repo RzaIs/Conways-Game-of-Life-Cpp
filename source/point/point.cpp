@@ -5,9 +5,4 @@ Point::Point(int x, int y) {
   this->y = y;
 }
 
-Point::Point() {
-  this->x = 0;
-  this->y = 0;
-}
-
 Point::~Point() {}

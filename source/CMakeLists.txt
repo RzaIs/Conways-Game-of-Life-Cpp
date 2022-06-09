@@ -13,3 +13,16 @@ add_executable(${PROJECT_NAME} main.cpp)
 # adding subdirectories
 add_subdirectory(cell)
 add_subdirectory(point)
+add_subdirectory(board)
+add_subdirectory(screen)
+add_subdirectory(game)
+
+#importing include directory
+target_include_directories(${PROJECT_NAME}
+  PRIVATE game
+)
+
+#linking included libraries
+target_link_libraries(${PROJECT_NAME}
+  game
+)
