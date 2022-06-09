@@ -6,7 +6,7 @@ private:
   bool isAlive;
 
 public:
-  Cell(int row, int col, bool isAlive);
+  Cell(int col, int row, bool isAlive);
   ~Cell();
 
   int getCol();
