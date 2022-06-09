@@ -12,8 +12,8 @@
 
 #include <unistd.h>
 
-#include "screen.hpp"
 #include "board.hpp"
+#include "ansi.hpp"
 
 class Game {
 private:
@@ -23,8 +23,8 @@ private:
   /// number of rows of board
   int rows;
 
-  /// screen object of game
-  Screen * screen;
+  /// ansi printer of game
+  AnsiPrinter * ansiPrinter;
 
   /// board object of game
   Board * board;
@@ -42,7 +42,7 @@ public:
    * @param rows the number of rows of board
    * @param scale the scaling coeff of renderer
    */
-  Game(int cols, int rows, int scale);
+  Game(int cols, int rows);
 
   /**
    * @brief Destroy the Game object

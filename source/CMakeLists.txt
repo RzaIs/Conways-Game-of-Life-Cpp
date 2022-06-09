@@ -14,7 +14,7 @@ add_executable(${PROJECT_NAME} main.cpp)
 add_subdirectory(cell)
 add_subdirectory(point)
 add_subdirectory(board)
-add_subdirectory(screen)
+add_subdirectory(ansi)
 add_subdirectory(game)
 
 #importing include directory

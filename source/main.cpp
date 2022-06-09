@@ -7,7 +7,7 @@
  */
 int main(int argc, char const * argv[]) {
 
-  Game game = Game(320, 180, 4);
+  Game game = Game(30, 20);
   
   game.start();
  
