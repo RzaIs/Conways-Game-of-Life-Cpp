@@ -1,9 +1,6 @@
 #include "ansi.hpp"
 
-AnsiPrinter::AnsiPrinter(int cols, int rows) {
-  this->cols = cols;
-  this->rows = rows;
-}
+AnsiPrinter::AnsiPrinter() {}
 
 AnsiPrinter::~AnsiPrinter() {}
 

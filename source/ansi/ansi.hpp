@@ -1,3 +1,14 @@
+/**
+ * @file ansi.hpp
+ * @author Rza Ismayilov (rzaismail82@gmail.com)
+ * @author Taleh Taghiyev (taleh.taghiyev@ufaz.az)
+ * @version 0.1
+ * @date 2022-06-10
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #pragma once
 
 #include <iostream>
@@ -26,14 +37,27 @@
 
 class AnsiPrinter
 {
-private:
-  int cols;
-  int rows;
 public:
-  AnsiPrinter(int cols, int rows);
+  /**
+   * @brief Construct a new Ansi Printer object
+   */
+  AnsiPrinter();
+
+  /**
+   * @brief Destroy the Ansi Printer object
+   */
   ~AnsiPrinter();
 
+  /**
+   * @brief prints a cell according to its state 
+   * 
+   * @param isAlive the state of cell
+   */
   void print(bool isAlive);
+
+  /**
+   * @brief clear the console
+   */
   void clear();
 
 };

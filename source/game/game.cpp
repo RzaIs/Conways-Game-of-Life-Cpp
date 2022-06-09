@@ -5,7 +5,7 @@ Game::Game(int cols, int rows) {
   this->cols = cols;
   this->rows = rows;
   this->board = new Board(cols, rows);
-  this->ansiPrinter = new AnsiPrinter(cols, rows);
+  this->ansiPrinter = new AnsiPrinter();
 }
 
 Game::~Game() {
