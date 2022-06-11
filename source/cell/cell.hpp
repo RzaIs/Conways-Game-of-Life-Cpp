@@ -27,7 +27,7 @@ public:
    * @param col 
    * @param isAlive 
    */
-  Cell(int row, int col, bool isAlive);
+  Cell(int col, int row, bool isAlive);
 
   /**
    * @brief Destroy the Cell object
