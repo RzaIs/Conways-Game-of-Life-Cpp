@@ -12,3 +12,5 @@ for SDL2 version clone the SDL branch, for ANSI version clone the ANSI branch
 ``` ./run.sh ``` to run the program
 
 ``` ./test.sh ``` to test
+
+``` ./doxy.sh ``` to generate doxygen documentation (make sure doxygen is installed on your system)
