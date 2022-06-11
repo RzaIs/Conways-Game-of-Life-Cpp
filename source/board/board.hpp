@@ -30,6 +30,7 @@ private:
   /// 2D vectors to store the future state of table
   std::vector<std::vector<Cell>> newTable;
 
+public:
   /**
    * @brief checks if the given col and row is in bounds of board
    * 
@@ -77,7 +78,6 @@ private:
    */
   std::vector<Cell> getNeighbors(int col, int row);
 
-public:
   /**
    * @brief Construct a new Board object
    * 
